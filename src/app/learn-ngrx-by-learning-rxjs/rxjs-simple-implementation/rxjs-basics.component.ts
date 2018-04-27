@@ -8,24 +8,18 @@ import {MyObservable} from './data-producer.service';
 })
 export class RxjsBasicsComponent implements OnInit {
 
-  myComponentObserver;
+  constructor() {}
 
-  constructor() {
-    this.myComponentObserver = {
-      next: (val) => {
-        return val;
-      },
+  ngOnInit() {
+    const myComponentObserver = {
+      next: val => val,
       error: err => console.log(`Oops... ${err}`),
       complete: () => console.log(`Completed!`),
     };
-
-  }
-
-  ngOnInit() {
-    const obs1$ = new MyObservable(this.myComponentObserver);
-    const subscription$ = obs1$.subscribe();
-    const obs2$ = new MyObservable({next: val => console.log(`Observer 2 is in da house... ${val}`)});
-    obs2$.subscribe();
+    const obs1$ = new MyObservable(myComponentObserver);
+    const subscription$ = obs1$.subscribe(val => console.log(`Observer 1... ${val}`));
+    const obs2$ = new MyObservable({next: val => val});
+    obs2$.subscribe(val => console.log(`Observer 2... ${val}`));
     setTimeout(() => {
       subscription$.unsubscribe();
     }, 3000);
