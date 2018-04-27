@@ -22,10 +22,12 @@ export class RxjsBasicsComponent implements OnInit {
   }
 
   ngOnInit() {
-    const unsub = MyObservable(this.myComponentObserver);
-    const subscriber2 = MyObservable({next: val => console.log(`Observer 2 is in da house... ${val}`)});
+    const obs1$ = new MyObservable(this.myComponentObserver);
+    const subscription$ = obs1$.subscribe();
+    const obs2$ = new MyObservable({next: val => console.log(`Observer 2 is in da house... ${val}`)});
+    obs2$.subscribe();
     setTimeout(() => {
-      unsub();
+      subscription$.unsubscribe();
     }, 3000);
   }
 
