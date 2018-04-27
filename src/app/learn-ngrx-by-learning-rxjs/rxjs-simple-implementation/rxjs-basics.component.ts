@@ -21,12 +21,12 @@ export class RxjsBasicsComponent implements OnInit {
     const obs1$ = new MyObservable(myComponentObserver);
     const subscription$ = obs1$.subscribe(val => {
       this.val1 = val;
-      console.log(`Observer 1... ${val}`;
+      console.log(`Observer 1... ${val}`);
     });
     const obs2$ = new MyObservable({next: val => val});
     obs2$.subscribe(val =>  {
       this.val2 = val;
-      console.log(`Observer 2... ${val}`;
+      console.log(`Observer 2... ${val}`);
     });
     setTimeout(() => {
       subscription$.unsubscribe();
