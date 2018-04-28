@@ -4,7 +4,7 @@ Link to the full [presentation](https://docs.google.com/presentation/d/1N0bp3BMY
 
 Following project demonstrates:
 1. Simple implementation of Observable class covering the following:
- - data producer: in my example a service which async generates the fibonci sequence
+ - data producer: in my example a service which async generates the fibonacci sequence
  - crating observable and an observer
  - creating subscription by executing the observable instance and calling subscribe()
  - unsubscribing the subscription.
