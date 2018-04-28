@@ -21,7 +21,7 @@ export class RxjsObservableUseComponent implements OnInit {
     const happyObservableSubscription$ = happyObservable$.subscribe(result => console.log(result)); // cool
     happyObservableSubscription$.unsubscribe();
   }
-  toggleOf() {
+  toggleOff() {
     this.toggleEditModeService.setIsEdit(false);
   }
 }
