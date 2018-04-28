@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {ToggleEditModeService} from "./learn-ngrx-by-learning-rxjs/toggle-edit-mode.service";
+import {ToggleEditModeService} from "./use-rxjs-for-state-handling/toggle-edit-mode.service";
 import {Observable} from "rxjs/Observable";
 
 @Component({

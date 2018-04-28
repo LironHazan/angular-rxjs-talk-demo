@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { RxjsBasicsComponent } from './learn-ngrx-by-learning-rxjs/rxjs-simple-implementation/rxjs-basics.component';
-import {DataProducerService} from "./learn-ngrx-by-learning-rxjs/rxjs-simple-implementation/data-producer.service";
+import { RxjsBasicsComponent } from './use-rxjs-for-state-handling/rxjs-simple-implementation/rxjs-basics.component';
+import {DataProducerService} from "./use-rxjs-for-state-handling/rxjs-simple-implementation/data-producer.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
-import { RxjsObservableUseComponent } from './learn-ngrx-by-learning-rxjs/rxjs-observable-use/rxjs-observable-use.component';
-import { UsingSubjectsComponent } from './learn-ngrx-by-learning-rxjs/using-subjects/using-subjects.component';
-import {ToggleEditModeService} from "./learn-ngrx-by-learning-rxjs/toggle-edit-mode.service";
+import { RxjsObservableUseComponent } from './use-rxjs-for-state-handling/rxjs-observable-use/rxjs-observable-use.component';
+import { UsingSubjectsComponent } from './use-rxjs-for-state-handling/using-subjects/using-subjects.component';
+import {ToggleEditModeService} from "./use-rxjs-for-state-handling/toggle-edit-mode.service";
 import {AppRoutingModule} from "./app-routing.module";
 
 

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {UsingSubjectsComponent} from "./learn-ngrx-by-learning-rxjs/using-subjects/using-subjects.component";
+import {UsingSubjectsComponent} from "./use-rxjs-for-state-handling/using-subjects/using-subjects.component";
 
 const appRoutes: Routes = [
   {path: 'subjects', component: UsingSubjectsComponent},
