@@ -28,12 +28,12 @@ export class MyObservable {
     this.myObserver = _myObserver;
   }
 
-  unsub;
+  unsubscribe;
 
   subscribe(cb) {
     const dataProducerService = new DataProducerService(); // YEP I'm Cold :)
     dataProducerService.getNextFib((err, num) => {
-      if (this.unsub) {
+      if (this.unsubscribe) {
         return;
       }
       cb(this.myObserver.next(num));
@@ -41,7 +41,7 @@ export class MyObservable {
 
       return {
         unsubscribe: () => {
-          this.unsub = true;
+          this.unsubscribe = true;
           dataProducerService.destroy();
         }
       };

@@ -10,14 +10,15 @@ import {Observable} from "rxjs/Observable";
 })
 export class AppComponent implements OnInit {
   title = 'app';
+  value;
   isOnEditMode$: Observable<boolean>;
+
   constructor(private router: Router, private toggleEditModeService: ToggleEditModeService) {}
 
   ngOnInit() {
     this.isOnEditMode$ = this.toggleEditModeService.isOnEditMode();
   }
 
-  value;
   onCalledValue(val) {
     this.value = val;
   }

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {ToggleEditModeService} from "../toggle-edit-mode.service";
+import {ToggleEditModeService} from '../toggle-edit-mode.service';
 
 @Component({
   selector: 'app-using-subjects',
-  templateUrl: './using-subjects.component.html',
-  styleUrls: ['./using-subjects.component.css']
+  templateUrl: './using-subjects.component.html'
 })
 export class UsingSubjectsComponent implements OnInit {
 

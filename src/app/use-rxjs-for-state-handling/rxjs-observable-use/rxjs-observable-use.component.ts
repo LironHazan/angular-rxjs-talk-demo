@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import {ToggleEditModeService} from "../toggle-edit-mode.service";
+import {ToggleEditModeService} from '../toggle-edit-mode.service';
 
 @Component({
   selector: 'app-rxjs-observable-use',
-  templateUrl: './rxjs-observable-use.component.html',
-  styleUrls: ['./rxjs-observable-use.component.css']
+  templateUrl: './rxjs-observable-use.component.html'
 })
 export class RxjsObservableUseComponent implements OnInit {
   isOnEditMode$: Observable<boolean>;
