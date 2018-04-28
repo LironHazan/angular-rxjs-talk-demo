@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {MyObservable} from './data-producer.service';
 
 @Component({
@@ -7,7 +7,7 @@ import {MyObservable} from './data-producer.service';
   styleUrls: ['./rxjs-basics.component.css']
 })
 export class RxjsBasicsComponent implements OnInit {
-
+  @Output() calledValue = new EventEmitter();
   constructor() {}
   val1;
   val2;
@@ -26,6 +26,7 @@ export class RxjsBasicsComponent implements OnInit {
     const obs2$ = new MyObservable({next: val => val});
     obs2$.subscribe(val =>  {
       this.val2 = val;
+      this.calledValue.emit(val);
       console.log(`Observer 2... ${val}`);
     });
     setTimeout(() => {

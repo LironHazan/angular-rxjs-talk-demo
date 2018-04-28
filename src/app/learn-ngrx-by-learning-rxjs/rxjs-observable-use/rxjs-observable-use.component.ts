@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import {ToggleEditModeService} from "../toggle-edit-mode.service";
 
 @Component({
   selector: 'app-rxjs-observable-use',
@@ -7,8 +8,7 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./rxjs-observable-use.component.css']
 })
 export class RxjsObservableUseComponent implements OnInit {
-
-  constructor() { }
+  constructor(private toggleEditModeService: ToggleEditModeService) { }
 
   ngOnInit() {
     const happyObservable$ = new Observable((observer) => {
@@ -18,5 +18,7 @@ export class RxjsObservableUseComponent implements OnInit {
     const happyObservableSubscription$ = happyObservable$.subscribe(result => console.log(result)); // cool
     happyObservableSubscription$.unsubscribe();
   }
-
+  toggleOf() {
+    this.toggleEditModeService.setIsEdit(false);
+  }
 }

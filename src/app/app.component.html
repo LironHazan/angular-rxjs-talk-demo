@@ -1,6 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div>
-  RXJS FUN!
-  <app-rxjs-basics></app-rxjs-basics>
+  <label class="labeling" *ngIf="isOnEditMode$ | async"> Edit Mode Label is ON </label>
+  <div> <h2> RxJs FUN Concepts! </h2> {{value}} </div>
+  <app-rxjs-basics (calledValue)="onCalledValue($event)"></app-rxjs-basics>
+  <div><app-rxjs-observable-use></app-rxjs-observable-use></div>
+  <div>
+    <button (click)="routeToSubject($event);">Navigate To: '/subjects'</button>
+    <button routerLink='/'>BACK</button>
+  </div>
 </div>
+<router-outlet></router-outlet>
 
