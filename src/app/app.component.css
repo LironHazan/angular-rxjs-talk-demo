@@ -3,3 +3,7 @@
   font-weight: lighter;
   color: lightcoral;
 }
+.title {
+  display: inline-flex;
+  align-items: center;
+}

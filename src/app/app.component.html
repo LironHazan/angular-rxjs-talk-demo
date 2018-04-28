@@ -1,6 +1,9 @@
 <div>
   <label class="labeling" *ngIf="isOnEditMode$ | async"> Edit Mode Label is ON </label>
-  <div> <h2> RxJs FUN Concepts! </h2> {{value}} </div>
+  <div class="title">
+    <h2> RxJs FUN UI State Stuff! ---> </h2>
+    <div> {{value}} </div>
+  </div>
   <app-rxjs-basics (calledValue)="onCalledValue($event)"></app-rxjs-basics>
   <div><app-rxjs-observable-use></app-rxjs-observable-use></div>
   <div>

@@ -8,9 +8,12 @@ import {ToggleEditModeService} from "../toggle-edit-mode.service";
   styleUrls: ['./rxjs-observable-use.component.css']
 })
 export class RxjsObservableUseComponent implements OnInit {
+  isOnEditMode$: Observable<boolean>;
   constructor(private toggleEditModeService: ToggleEditModeService) { }
 
   ngOnInit() {
+    this.isOnEditMode$ = this.toggleEditModeService.isOnEditMode();
+
     const happyObservable$ = new Observable((observer) => {
       observer.next('cool');
       observer.complete();

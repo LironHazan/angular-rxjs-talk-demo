@@ -1,4 +1,1 @@
-<div>
-  I'm a child component of app.component
-</div>
-<button (click)="toggleOf($event);">Toggle OFF EditMode Label</button>
+<button *ngIf="isOnEditMode$ | async" (click)="toggleOf($event);">Toggle OFF EditMode Label</button>
