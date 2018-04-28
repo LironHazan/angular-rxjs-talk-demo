@@ -1,5 +1,17 @@
-# NgrxStoreTalkDemo
+# RxJSTalkDemo
 
+Link to the full [presentation](https://docs.google.com/presentation/d/1N0bp3BMYiGyAulJDiMajQ_Wr1ozlS1jwOrqHOexYZS0/edit?usp=sharing) 
+
+Following project demonstrates:
+1. Simple implementation of Observable class covering the following:
+ - data producer: in my example a service which async generates the fibonci sequence
+ - crating observable and an observer
+ - creating subscription by executing the observable instance and calling subscribe()
+ - unsubscribing the subscription.
+2. Simple demonstration of creating Observable and Subscription by rxjs api.
+3. Example of sharing state with several components using BehaviorSubject (entryLevel route component with others)
+
+ 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
 
 ## Development server
